@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiXCARD</title>
+    <link rel="icon" href="assets/logo.png">
+</head>
+<style>
+    body{
+        background-color: black;
+        margin: 0px;
+        height: 100vh;
+        width: 100vw;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    video{
+        position: absolute;
+        object-fit: cover;
+        top: 0px;
+        left: 0px;
+        z-index: -11;
+        height: 100vh;
+        width: 100vw;
+    }
+    header{
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 80px;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        margin: 0px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a:hover{
+        text-shadow: 0px 0px 20px rgb(250, 0, 250);
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 80px;
+    }
+    .login{
+        
+        height: 40px;
+        width: 120px;
+        border: 20px;
+        background-color: purple;
+        color: white;
+        font-weight: 800;
+        border-radius: 20px;
+
+        
+    }
+    .overlay{
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(to top,black,rgb(0, 0, 0 ,0.5),transparent);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .slidl{
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 220px;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        animation: down 10s linear infinite;
+    }
+        .slidr{
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 220px;
+        height: auto;
+     background-color: transparent;
+        position: absolute;
+        bottom: 0px;
+        right: 50px;
+        animation: up 10s linear infinite;
+        
+    }
+
+    .cardgo{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#312800,#806800,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+  .cardg{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#103100,#327c00,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+  .cardr{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#310000,#5f0000,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+  .cardb{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#050031,#06005f,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+  .cardp{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#1b0031,#34005f,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+
+    .card{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background-color: #202020;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .imgc{
+        width: 190px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    @keyframes down {
+        0%{
+            position: absolute;
+            left: 50px;
+            top: 0px;
+        }
+        100%{
+            position: absolute;
+            left: 50px;
+            top: -200vh;
+        }
+        
+    }
+       @keyframes up {
+        0%{
+            position: absolute;
+           right:  50px;
+            bottom:  0px;
+        }
+        100%{
+            position: absolute;
+            right:  50px;
+            bottom: -200vh;
+        }
+        
+    }
+    .center{
+        margin-top: -20vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+        height: 700px;
+        
+        color: white;
+    }
+        .center h4{
+            margin-top:-100px ;
+       z-index: 10;
+       text-align: center;
+       width: 600px;
+        
+        color: rgb(182, 182, 182);
+    }
+    .center h1{
+        z-index: 10;
+        background: linear-gradient(to right,rgb(44, 0, 65),rgb(149, 29, 204),white) ;
+        background-clip: text;
+        color: transparent;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 160px;
+        font-weight: bolder;
+width: 760px;
+    } .center button{
+     width: 200px;
+     height: 60px;
+     border-radius: 20px;
+     background-color: rgb(70, 0, 136);
+     border: none;
+     box-shadow: 0px 0px 32px rgb(92, 0, 179);;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+z-index: 10;
+transition: 0.5s ease-in-out;
+    }
+    .center button:hover{
+     transform: translateY(-20px);
+z-index: 10;
+  box-shadow: 0px 0px 32px rgb(255, 255, 255);;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img width="60" src="assets/logo.png" alt=""></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="card.html">CARDS</a></li>
+                <li><a href="">RANK</a></li
+                <li><a href="">HOW TO</a></li>
+                <BUtton onclick="login()" class="login">LOGIN</BUtton>
+            </ul>
+        </nav>
+    </header>
+<div class="overlay"></div>
+
+
+
+<div class="slidl">
+    
+    <div class="cardr"><img class="imgc" src="card/AKIra R.png" alt=""></div>
+     <div class="cardr"><img  class="imgc" src="card/Zara R.png" alt=""></div>
+      <div class="cardp"><img  class="imgc" src="card/VIper P.png" alt=""></div>
+       <div class="cardr"><img  class="imgc" src="card/HELmin R.png" alt=""></div>
+        <div class="cardp"><img  class="imgc" src="card/ALICHA P.png" alt=""></div>
+         <div class="cardgo"><img  class="imgc" src="card/Nyx GO.png" alt=""></div>
+          <div class="cardg"><img class="imgc"  src="card/ROCKY G.png" alt=""></div>
+           <div class="cardr"><img class="imgc"  src="card/HELmin R.png" alt=""></div>
+           <div class="cardp"><img class="imgc"  src="card/THE blue mage P.png" alt=""></div>
+</div>
+
+
+
+<div class="slidr">
+    
+     <div class="cardr"><img class="imgc"  src="card/AKIra R.png" alt=""></div>
+     <div class="cardr"><img  class="imgc" src="card/Zara R.png" alt=""></div>
+      <div class="cardp"><img  class="imgc" src="card/VIper P.png" alt=""></div>
+       <div class="cardg"><img  class="imgc" src="card/HELmin R.png" alt=""></div>
+        <div class="cardp"><img  class="imgc" src="card/ALICHA P.png" alt=""></div>
+         <div class="cardgo"><img  class="imgc" src="card/Nyx GO.png" alt=""></div>
+          <div class="cardg"><img class="imgc"  src="card/ROCKY G.png" alt=""></div>
+           <div class="cardr"><img class="imgc"  src="card/HELmin R.png" alt=""></div>
+           <div class="cardp"><img  class="imgc" src="card/THE blue mage P.png" alt=""></div>
+</div>
+
+
+
+<div class="center">
+    <H1>PIXCARD </H1>
+    <h4 >the card battel game created for people +18 cash reward can be earned
+and in game coin to exchange and gift and sell and also buy have fun and visit us in our discord
+if you have any question
+    </h4>
+    <BUtton onclick="login()">PLAY</BUtton>
+</div>
+
+
+
+
+    <video  src="vid/1757660845 (1).mp4" muted loop autoplay></video>
+</body>
+<script>
+    function login(){
+        window.location.href = "login.html"
+    }
+  
+</script>
+</html>

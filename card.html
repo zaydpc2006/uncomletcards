@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD</title>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+<style>
+    body{
+        background-color: #0c0014;
+        background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 200px;
+    }
+ header{
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 80px;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        margin: 0px;
+        box-shadow: 0px 0px 12px rgb(174, 0, 255);
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a:hover{
+        text-shadow: 0px 0px 20px rgb(250, 0, 250);
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 80px;
+    }
+    .login{
+        
+        height: 40px;
+        width: 120px;
+        border: 20px;
+        background-color: purple;
+        color: white;
+        font-weight: 800;
+        border-radius: 20px;
+
+        
+    }
+    .search{
+        position: absolute;
+        top: 120px;
+        width: 60%;
+        height: 60px;
+        background-color: #11001d;
+        box-shadow: 0px 0px 20px white;
+        border-radius: 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .srx{
+        width: 90%;
+        height: 30px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: bold;
+        outline: none;
+        background-color: transparent;
+        border: none;
+    }
+    span{
+        color: white;
+    }
+    .place{
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 90%;
+        padding: 30px;
+    }
+     .cardgo{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#312800,#806800,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+
+    }
+    .cardgo:hover{
+       transform: translateY(-10px);
+       box-shadow: 0px 5px 10px #806800;
+
+    }
+
+
+  .cardg{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#103100,#327c00,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  transition: 0.3s ease-in-out;
+    }
+ .cardg:hover{
+       transform: translateY(-10px);
+       box-shadow: 0px 5px 10px #0e5300;
+
+    }
+
+  .cardr{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#310000,#5f0000,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  transition: 0.3s ease-in-out;
+    }
+ .cardr:hover{
+       transform: translateY(-10px);
+       box-shadow: 0px 5px 15px #611300;
+
+    }
+
+  .cardb{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#050031,#06005f,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  transition: 0.3s ease-in-out;
+    }
+
+ .cardb:hover{
+       transform: translateY(-10px);
+       box-shadow: 0px 5px 15px #000a61;
+
+    }
+
+  .cardp{
+        width: 200px;
+        height: 320px;
+        border-radius: 20px;
+        background:linear-gradient(45deg,#202020,#1b0031,#34005f,#202020);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  transition: 0.3s ease-in-out;
+    }
+     .cardp:hover{
+       transform: translateY(-10px);
+       box-shadow: 0px 5px 15px #3e0079;
+
+    }
+
+.imgc{
+        width: 190px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    
+</style>
+<body>
+        <header>
+        <nav>
+            <ul>
+                <li><img width="60" src="assets/logo.png" alt=""></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="card.html">CARDS</a></li>
+                <li><a href="">RANK</a></li
+                <li><a href="">HOW TO</a></li>
+                <BUtton onclick="login()" class="login">LOGIN</BUtton>
+            </ul>
+        </nav>
+    </header>
+    <div class="search">
+        <input class="srx" type="text">
+        <span class="material-symbols-outlined">
+search
+</span>
+    </div>
+
+
+    <div class="place">
+          <div class="cardp"><img class="imgc"  src="card/Aira P.png" alt=""></div>
+           <div class="cardr"><img class="imgc"  src="card/ALba GO.png" alt=""></div>
+            <div class="cardr"><img class="imgc"  src="card/AKIra R.png" alt=""></div>
+             <div class="cardr"><img class="imgc"  src="card/ALICHA P.png" alt=""></div>
+              <div class="cardr"><img class="imgc"  src="card/CENA G.png" alt=""></div>
+               <div class="cardr"><img class="imgc"  src="card/Coralia B.png" alt=""></div>
+                <div class="cardr"><img class="imgc"  src="card/CRINA B.png" alt=""></div>
+                 <div class="cardr"><img class="imgc"  src="card/Coraliya GO.png" alt=""></div>
+     <div class="cardr"><img  class="imgc" src="card/Zara R.png" alt=""></div>
+      <div class="cardp"><img  class="imgc" src="card/VIper P.png" alt=""></div>
+        <div class="cardp"><img  class="imgc" src="card/ALICHA P.png" alt=""></div>
+         <div class="cardgo"><img  class="imgc" src="card/Nyx GO.png" alt=""></div>
+          <div class="cardg"><img class="imgc"  src="card/ROCKY G.png" alt=""></div>
+           <div class="cardr"><img class="imgc"  src="card/HELmin R.png" alt=""></div>
+           <div class="cardp"><img  class="imgc" src="card/THE blue mage P.png" alt=""></div>
+            <div class="cardr"><img class="imgc"  src="card/Lumina B.png" alt=""></div>
+             <div class="cardr"><img class="imgc"  src="card/MAGY B.png" alt=""></div>
+              <div class="cardr"><img class="imgc"  src="card/Oona p.png" alt=""></div>
+               <div class="cardr"><img class="imgc"  src="card/SARA B.png" alt=""></div>
+                <div class="cardr"><img class="imgc"  src="card/sparkle B.png" alt=""></div>
+                 <div class="cardr"><img class="imgc"  src="card/Anaya GO.png" alt=""></div>
+                  <div class="cardr"><img class="imgc"  src="card/ALEXA B.png" alt=""></div>
+                   <div class="cardr"><img class="imgc"  src="card/YURUMI R.png" alt=""></div>
+                    <div class="cardr"><img class="imgc"  src="card/ZELDA GO.png" alt=""></div>
+                     <div class="cardr"><img class="imgc"  src="card/Zara R.png" alt=""></div>
+           
+    </div>
+
+
+<H1 style="color: white;">NEW</H1>
+     <div class="place">
+         
+           
+    </div>
+</body>
+<script>
+    function login(){
+        window.location.href = "login.html"
+    }
+    
+</script>
+<script>
+    const searchInput = document.querySelector(".srx");
+    const cards = document.querySelectorAll(".place > div");
+
+    searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+
+        cards.forEach(card => {
+            const img = card.querySelector("img");
+            let name = card.getAttribute("data-name");
+
+            // If data-name doesn't exist, extract name from src (as fallback)
+            if (!name && img) {
+                const src = img.getAttribute("src");
+                name = src.substring(src.lastIndexOf("/") + 1).replace(".png", "").toLowerCase();
+            } else {
+                name = name.toLowerCase();
+            }
+
+            // Show or hide card
+            if (name.includes(query)) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+</script>
+
+</html>
